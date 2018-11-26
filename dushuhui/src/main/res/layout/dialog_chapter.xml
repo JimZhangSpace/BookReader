@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="345dp"
+        android:layout_height="369dp"
+        android:background="@drawable/bg_common"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/text_chapters_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总共X个章节"
+                android:textColor="@color/color_999999"
+                android:textSize="14sp"
+                android:layout_marginLeft="12dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="14.5dp"
+                android:src="@drawable/btn_sort"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="排序"
+                android:textColor="@color/color_999999"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

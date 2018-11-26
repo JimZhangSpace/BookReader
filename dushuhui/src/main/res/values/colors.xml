@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#f7f6f1</color>
+    <color name="colorPrimaryDark">#DDDDDD</color>
+    <color name="colorAccent">#d9c39c</color>
+    <color name="bottom_color">#f7f6f1</color>
+    <color name="primary_dark">#d9c39c</color>
+
+    <color name="white">#FFFFFD</color>
+    <color name="white_20">#34FFFFFF</color>
+    <color name="white_30">#4CFFFFFF</color>
+    <color name="white_10">#19FFFFFF</color>
+    <color name="white_50">#7FFFFFFF</color>
+    <color name="white_90">#E5FFFFFF</color>
+    <color name="black_50">#7f000000</color>
+    <color name="black_30">#4C000000</color>
+    <color name="black_10">#19000000</color>
+    <color name="activity_bg_gray">#efeff4</color>
+    <color name="activity_bg_white">#EEEEEE</color>
+    <color name="bg_clickable_linearLayout_pressed">#ffd9d9d9</color>
+
+    <color name="ic_ct_dialog_line">#3278d3</color>
+    <color name="ic_ct_dialog_btn_pressed">#ffeeeeee</color>
+    <color name="font_ct_dialog">#ff666666</color>
+    <color name="font_ct_dialog_title">#3278d3</color>
+    <color name="font_ct_dialog_text">#ff444444</color>
+    <color name="font_ct_dialog_button">#ff666666</color>
+    <color name="font_mid_gray">#666666</color>
+    <color name="font_light_gray">#969696</color>
+    <color name="font_light_blue">#A6BDD2</color>
+    <color name="font_dark_blue">#677B93</color>
+    	
+    <color name="blue_color">#97D4FF</color>
+    <color name="red_color">#f53f3f</color>
+    
+    <color name="font_dark_gray">#333333</color>
+    <color name="font_middark_gray">#666666</color>
+    <color name="divider_line">#dddddd</color>
+    <color name="chat_room_nick_color">#58cc32</color>
+    <color name="bg_live_stop">#E1262223</color>
+    <color name="bg_charge_back_color">#FFA755</color>
+    <color name="bg_charge_color">#1B91E0</color>
+    <color name="bg_btn_dark_gray">#4f4b4c</color>
+    <color name="gift_color">#FF8457</color>
+    <color name="bg_pay">#FFFFFF</color>
+    
+
+    
+    <color name="bg_title_bar">#fff8f8f8</color>
+    
+
+    
+
+
+
+    
+    
+    
+
+
+    <color name="camera_video_grid_bg_color">#F3F4F6</color>
+    <color name="pink">#f90051</color>
+
+
+
+
+    <color name="divider_color">#FFCCCCCC</color>
+
+
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_e1e1e1">#e1e1e1</color>
+    <color name="color_f3f3f3">#f3f3f3</color>
+    <color name="color_3278d3">#3278d3</color>
+    <color name="color_71afff">#71afff</color>
+    <color name="black">#000000</color>
+
+
+    <color name="android_blue">#1772c4</color>
+    <color name="android_light_blue">#33b5e5</color>
+    <color name="actionbar_blue">#1772c4</color>
+    <color name="none">#00000000</color>
+    <color name="border">#bbb</color>
+    <color name="background_lightgray">#ffeeeeee</color>
+    <color name="background_darkergray">#c9cacb</color>
+    <color name="background_dark">#777777</color>
+    <color name="background_black">#222222</color>
+    <color name="background_white">#fbfbfb</color>
+    <color name="line_background">#999999</color>
+    <color name="text_dark">#111111</color>
+    <color name="text_blue">#1772c4</color>
+    <color name="text_black">#000000</color>
+    <color name="text_gray">#999999</color>
+    <color name="dark_gray">#555555</color>
+    <color name="light_gray">#cccccc</color>
+    <color name="text_white">#f6f6f6</color>
+    <color name="image_background_blue">#9fd0e3</color>
+    <color name="background_darkblue">#0C5D89</color>
+    <color name="background_selected_blue">#34a0c8</color>
+
+    <color name="general_background">#eeeeee</color>
+    <color name="item_background">#ffffff</color>
+    <color name="item_pressed_background">#eeeeee</color>
+    <color name="button_background">#1772c4</color>
+    <color name="button_pressed_background">#33b5e5</color>
+    <color name="notify_detail_title_background">#fffeee</color>
+    <color name="notify_detail_title_text_color">#000000</color>
+    <color name="notify_detail_footer_background">#1D95D4</color>
+    <color name="refresh_listview_background">#888888</color>
+    <color name="file_download_background">#fffeee</color>
+    <color name="file_download_pressed_background">#fdfacb</color>
+
+    <color name="innoxyz_green">#98d24d</color>
+    <color name="innoxyz_blue">#1772c4</color>
+    <color name="test_red">#ffc8000e</color>
+    <color name="test_yellow">#ffc8b800</color>
+
+    <!--ACTION_BAR-->
+    <color name="action_bar_bg">#403836</color>
+    <color name="V3C37">#e8e8e8</color>
+    <color name="V3C6">#3175d1</color>
+
+    <color name="bg_interval">#ECEDEE</color>
+    <color name="bg_ecedee">#ECEDEE</color>
+    <color name="dot_before_customview">#D1BAA2</color>
+    <color name="color_f46565">#F46565</color>
+    <color name="color_f4b200">#F4B200</color>
+    <color name="color_cfbc97">#CFBC97</color>
+    <color name="color_shudan_pressed">#000000CC</color>
+
+    <color name="color_bg_dialog_listenbook">#ff0000</color>
+
+</resources>

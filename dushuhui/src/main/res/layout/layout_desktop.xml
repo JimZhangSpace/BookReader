@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:layout_width="341.5dp"
+        android:layout_height="61dp"
+        android:background="@drawable/bg_desktop"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:alpha="0.66">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/btn_close_desktop"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/default_image"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/chapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="第x期，这样世界的看法就地方撒地方"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:src="@drawable/btn_audio_suspend_desktop"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

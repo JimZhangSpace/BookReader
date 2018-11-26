@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="345dp"
+        android:layout_height="280dp"
+        android:background="@drawable/bg_common"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="13dp"
+            android:text="X"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绑定手机可以帮我们更好地联系"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="39dp"/>
+
+        <LinearLayout
+            android:layout_width="315dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_bind_phone"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/phone_small"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+
+                android:background="@null"
+                android:hint="请输入新手机号绑定"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="315dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_bind_phone"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/phone_small"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/get_auth_code"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:background="#FF5C5C"
+                android:gravity="center"
+                android:text="发送验证码"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:textSize="18sp"
+            android:textColor="#999999"
+            android:layout_marginTop="26.5dp"
+            android:background="#00000000"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

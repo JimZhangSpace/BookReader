@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">经典读书会</string>
+    <string name="list_null">暂无数据</string>
+
+    <array name="sex_array">
+        <item>男</item>
+        <item>女</item>
+
+    </array>
+
+    <array name="save_array">
+        <item>保存到相册</item>
+
+
+    </array>
+</resources>

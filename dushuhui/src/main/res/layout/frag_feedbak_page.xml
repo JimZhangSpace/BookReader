@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/name_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_common"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.5dp"
+                    android:text="选择反馈类型"
+                    android:textSize="14sp"
+                    android:textColor="#999999"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/choice"
+                    android:layout_width="19.5dp"
+                    android:layout_height="11dp"
+                    android:layout_marginRight="14.5dp"
+                    android:src="@drawable/back_right"
+                    android:rotation="90"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="394dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_common">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请填写详细内容~"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginRight="14.5dp"/>
+
+                <EditText
+                    android:id="@+id/edit_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:gravity="top"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginRight="14.5dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/submit"
+                android:layout_width="299dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/submit_normal"
+                android:layout_marginTop="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

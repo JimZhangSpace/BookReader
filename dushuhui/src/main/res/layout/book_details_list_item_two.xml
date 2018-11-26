@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_interval"/>
+
+    <LinearLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/dot_tag"
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:background="@color/dot_before_customview"
+            android:layout_marginTop="3dp"/>
+
+       <!-- <TextView
+            android:id="@+id/content_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="内容简介："
+            android:layout_marginLeft="6dp"/>-->
+
+        <TextView
+            android:id="@+id/book_introduce_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="5dp"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999"/>
+
+    <LinearLayout
+        android:id="@+id/layout_chapter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:background="@color/dot_before_customview"
+            android:layout_alignBottom="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/book_chapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/font_dark_gray"
+            android:text="查看目录：共XXXXX"
+            android:layout_marginLeft="6dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/chapter_more"
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:src="@drawable/btn_list_right_arrow"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_interval"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_common"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/recommend_image"
+            android:layout_width="match_parent"
+            android:layout_height="139dp"
+            android:src="@drawable/default_image"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"/>
+        <TextView
+            android:id="@+id/recommend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试测试测试"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="15dp"
+            android:textSize="11sp"
+            android:textColor="@color/color_999999"
+            android:lineSpacingExtra="7dp"
+            android:text="速度快减肥路上的肌肤拉克丝地方就撒了桑德菲杰暗示了对方空间奥斯陆看到飞机大家疯狂拉升的空间发了卡手机发的卡拉深刻的浪费；垃圾筐大家疯狂。"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

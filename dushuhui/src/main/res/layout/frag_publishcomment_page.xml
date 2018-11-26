@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar"/>
+    <include layout="@layout/comment_divider_belowtoolbar"/>
+    
+    <LinearLayout
+        android:layout_width="345dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_publishcomment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp">
+        
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:hint="写几句你的想法吧..."
+            android:textColorHint="#999999"
+            android:textSize="14sp"
+            android:textColor="@color/font_dark_gray"
+            android:background="@null"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_gravity="center_horizontal">
+
+        <CheckedTextView
+            android:id="@+id/is_share"
+            android:checked="false"
+            android:drawableLeft="@drawable/is_share"
+            android:gravity="center"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布后分享到微信微博"
+            android:textColor="@color/color_999999"
+            android:textSize="11sp"  />
+        <!--<Button
+            android:id="@+id/yes_image"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+
+            android:background="@drawable/is_share"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布后分享到微信微博"
+            android:textColor="@color/color_999999"
+            android:textSize="11sp"
+            android:layout_marginLeft="3dp"/>-->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/determine"
+        android:layout_width="144dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_defaut_determine"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"/>
+
+
+</LinearLayout>

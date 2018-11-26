@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4e000000"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingPrefix"
+    >
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@null"
+        android:src="@mipmap/note_close"
+        android:layout_gravity="right"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+        <EditText
+            android:id="@+id/edit_content"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="229dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:hint="记录此刻的想法"
+            android:textColorHint="@color/font_light_gray"
+            android:textSize="14sp"
+            android:gravity="left|top"
+            android:textColor="@color/font_dark_gray"
+            />
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_below="@+id/edit_content"
+            android:textAppearance="@style/font_small_mid_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:corners_radius= "10dp"
+            app:stroke_color = "@color/font_light_gray"
+            app:stroke_width="1dp"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:text="世间芸芸众生，都在苦海里沉沦，却痴心妄想要求福田。"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            >
+            <View
+                android:background="#DDDDDD"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <LinearLayout
+                android:gravity="right|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:orientation="horizontal"
+                android:paddingRight="15dp"
+                >
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="60dp"
+                    android:text="确定"
+
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+
+                    android:layout_height="35dp"
+                    app:enabled_drawable = "@color/read_red_color"
+                    app:unEnabled_drawable = "@color/font_light_gray"
+                    app:corners_radius="4dp"
+                    android:enabled="false"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    
+
+</LinearLayout>

@@ -1,0 +1,260 @@
+/*
+ * Copyright (C) 2016 Pedro Paulo de Amorim
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.guomai.dushuhui.login;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import com.folioreader.Config;
+import com.folioreader.FolioReader;
+import com.folioreader.model.HighLight;
+import com.folioreader.model.ReadPosition;
+import com.folioreader.model.ReadPositionImpl;
+import com.folioreader.ui.base.OnSaveHighlight;
+import com.folioreader.util.AppUtil;
+import com.folioreader.util.ObjectMapperSingleton;
+import com.folioreader.util.OnHighlightListener;
+import com.folioreader.util.ReadPositionListener;
+import com.guomai.dushuhui.HighlightData;
+import com.guomai.dushuhui.R;
+import com.guomai.dushuhui.main.MainActivity;
+
+import org.greenrobot.eventbus.EventBus;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class LoginTipActivity extends AppCompatActivity
+        implements OnHighlightListener, ReadPositionListener {
+
+
+
+    private static final String LOG_TAG = LoginTipActivity.class.getSimpleName();
+    private FolioReader folioReader;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_logintip);
+        ButterKnife.bind(this);
+        folioReader = FolioReader.getInstance(getApplicationContext())
+                .setOnHighlightListener(this)
+                .setReadPositionListener(this);
+
+        getHighlightsAndSave();
+
+//        findViewById(R.id.phone_login).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {          //手机登录
+//
+//                /*Config config = AppUtil.getSavedConfig(getApplicationContext());
+//                if (config == null)
+//                    config = new Config();
+//
+//                config.setAllowedDirection(Config.AllowedDirection.ONLY_HORIZONTAL);
+//                config.setThemeColor(R.color.red);
+//                config.setShowTts(false);
+//
+//                folioReader.setConfig(config, true)
+//                        .openBook(R.raw.guaitan);*/
+//                Intent intent = new Intent(LoginTipActivity.this, LoginActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        findViewById(R.id.see_around).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {          //随便看看
+//
+//                /*ReadPosition readPosition = getLastReadPosition();
+//
+//                Config config = AppUtil.getSavedConfig(getApplicationContext());
+//                if (config == null)
+//                    config = new Config();
+//
+//                config.setAllowedDirection(Config.AllowedDirection.ONLY_HORIZONTAL);
+//                config.setShowTts(false);
+//                config.setThemeColor(R.color.red);
+//                folioReader.setReadPosition(readPosition)
+//                        .setConfig(config, true)
+//                        .openBook("file:///android_asset/pinang.epub");*/
+//                Intent intent = new Intent(LoginTipActivity.this, MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        findViewById(R.id.register).setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(LoginTipActivity.this, RegisterActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+    }
+
+
+    @OnClick({R.id.register,R.id.see_around,R.id.phone_login,R.id.iv_logo})
+    public void onClick(View v)
+    {
+        if(v.getId()==R.id.register)
+        {
+            Intent intent = new Intent(LoginTipActivity.this, RegisterActivity.class);
+                startActivity(intent);
+        }
+        else if(v.getId()==R.id.see_around)
+        {
+            Intent intent = new Intent(LoginTipActivity.this, MainActivity.class);
+                startActivity(intent);
+        }
+        else if(v.getId()==R.id.phone_login)
+        {
+            Intent intent = new Intent(LoginTipActivity.this, LoginActivity.class);
+                startActivity(intent);
+        }
+        else if(v.getId()==R.id.iv_logo)
+        {
+            ReadPosition readPosition = getLastReadPosition();
+                Config config = AppUtil.getSavedConfig(getApplicationContext());
+                if (config == null)
+                    config = new Config();
+
+                config.setAllowedDirection(Config.AllowedDirection.ONLY_HORIZONTAL);
+                config.setShowTts(false);
+                config.setFont(5);
+                config.setThemeColor(R.color.red);
+                folioReader.setReadPosition(readPosition)
+                        .setConfig(config, true)
+                        .openBook("file:///android_asset/pinang.epub");
+        }
+    }
+
+
+
+    private ReadPosition getLastReadPosition() {
+
+        ReadPosition readPosition = null;
+        ObjectReader objectReader = ObjectMapperSingleton.getObjectMapper().reader();
+
+        try {
+            readPosition = objectReader.forType(ReadPositionImpl.class)
+                    .readValue(getAssets().open("read_positions/read_position.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return readPosition;
+    }
+
+    @Override
+    public void saveReadPosition(ReadPosition readPosition) {
+
+        //Toast.makeText(this, "ReadPosition = " + readPosition.toJson(), Toast.LENGTH_SHORT).show();
+        Log.i(LOG_TAG, "-> ReadPosition = " + readPosition.toJson());
+    }
+
+    /*
+     * For testing purpose, we are getting dummy highlights from asset. But you can get highlights from your server
+     * On success, you can save highlights to FolioReader DB.
+     */
+    private void getHighlightsAndSave() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ArrayList<HighLight> highlightList = null;
+                ObjectMapper objectMapper = new ObjectMapper();
+                try {
+                    highlightList = objectMapper.readValue(
+                            loadAssetTextAsString("highlights/highlights_data.json"),
+                            new TypeReference<List<HighlightData>>() {
+                            });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                if (highlightList == null) {
+                    folioReader.saveReceivedHighLights(highlightList, new OnSaveHighlight() {
+                        @Override
+                        public void onFinished() {
+                            //You can do anything on successful saving highlight list
+                        }
+                    });
+                }
+            }
+        }).start();
+    }
+
+    private String loadAssetTextAsString(String name) {
+        BufferedReader in = null;
+        try {
+            StringBuilder buf = new StringBuilder();
+            InputStream is = getAssets().open(name);
+            in = new BufferedReader(new InputStreamReader(is));
+
+            String str;
+            boolean isFirst = true;
+            while ((str = in.readLine()) != null) {
+                if (isFirst)
+                    isFirst = false;
+                else
+                    buf.append('\n');
+                buf.append(str);
+            }
+            return buf.toString();
+        } catch (IOException e) {
+            Log.e("LoginTipActivity", "Error opening asset " + name);
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException e) {
+                    Log.e("LoginTipActivity", "Error closing asset " + name);
+                }
+            }
+        }
+        return null;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FolioReader.clear();
+    }
+
+    @Override
+    public void onHighlight(HighLight highlight, HighLight.HighLightAction type) {
+//        Toast.makeText(this,
+//                "highlight id = " + highlight.getUUID() + " type = " + type,
+//                Toast.LENGTH_SHORT).show();
+
+
+
+    }
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root"
+    android:background="@color/bg_interval"
+    android:orientation="vertical" >
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/content_head"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+            app:titleTextAppearance="@style/Toolbar_TextAppearance_White">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/font_dark_gray"
+                android:text="推荐书单" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:id="@+id/content_book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_above="@id/bottom_book"
+        android:layout_below="@id/content_head">
+        <include layout="@layout/common_recyler_layout" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/shudan_stroke"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E1E1E1"
+        android:layout_above="@id/bottom_book"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/bottom_book"
+        android:layout_width="match_parent"
+        android:layout_height="79.5dp"
+        android:background="#F7F6F0"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+                <TextView
+                    android:id="@+id/heji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计：￥xxx"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原价："
+                    android:textColor="@color/color_999999"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/all_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥xxx"
+                    android:textColor="@color/color_999999"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/price_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="｜已优惠：XXX"
+                    android:textColor="@color/color_999999"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/purchase"
+            android:layout_width="87.5dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/shudan_purchase_selector"/>
+
+    </LinearLayout>
+</RelativeLayout>
+

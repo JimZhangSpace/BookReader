@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12.5dp"
+        android:layout_marginBottom="12.5dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp">
+        <RelativeLayout
+            android:id="@+id/rmb_num"
+            android:layout_width="144dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_account_gold">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X元"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/yuanlai_shubi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3000书币+"
+                        android:textColor="#999999"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:id="@+id/zengsong_shubi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500书币"
+                        android:textColor="#e44649"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/xie_bg1"
+                android:layout_width="42dp"
+                android:layout_height="33dp"
+                android:src="@drawable/icon_label"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/rmb_num2"
+            android:layout_width="144dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_account_gold">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:id="@+id/money2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X元"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/yuanlai_shubi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3000书币+"
+                        android:textColor="#999999"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:id="@+id/zengsong_shubi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500书币"
+                        android:textColor="#e44649"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/xie_bg2"
+                android:layout_width="42dp"
+                android:layout_height="33dp"
+                android:src="@drawable/icon_label"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

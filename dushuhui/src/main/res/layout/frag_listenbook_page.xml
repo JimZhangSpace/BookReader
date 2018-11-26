@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+            app:titleTextAppearance="@style/Toolbar_TextAppearance_White">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/font_dark_gray"
+                android:text="听书" />
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/nav_btn_share"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@id/appbar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+    <android.support.v7.widget.CardView
+        android:id="@+id/book_image_card_view"
+        android:layout_width="159dp"
+        android:layout_height="210dp"
+        app:cardCornerRadius="2dp"
+        android:layout_marginTop="8.5dp">
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/default_image" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/listen_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已有XXX人在听"
+        android:textColor="#E0BE00"
+        android:textSize="11sp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/listener_chapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第X章.测试测试测试测试"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="XXXX"
+        android:textColor="@color/font_middark_gray"
+        android:layout_marginTop="17dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/btn_catalog"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@drawable/btn_catalog"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目录"
+                android:textSize="12sp"
+                android:textColor="@color/color_999999"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="75dp">
+            <ImageView
+                android:id="@+id/btn_time"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@drawable/btn_time"/>
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXXX"
+                android:textSize="12sp"
+                android:textColor="@color/color_999999"
+                android:layout_marginTop="5dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18.5dp"
+        android:layout_marginRight="18.5dp">
+        
+        <TextView
+            android:id="@+id/begin_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:20"
+            android:textSize="12sp"
+            android:textColor="@color/font_middark_gray"
+            android:layout_marginRight="6dp"/>
+        
+       <!-- <ProgressBar
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:background="@drawable/custom_progress"
+            android:layout_gravity="center_vertical"/>-->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:max="100"
+            android:progressDrawable="@drawable/layer_progress"
+            android:thumb="@drawable/progress_dot" />
+
+            <TextView
+                android:layout_below="@id/seek_bar"
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="left"
+                android:padding="3dp"
+                android:text="Value:0"
+                android:textColor="#16BC5C"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:20"
+            android:textSize="12sp"
+            android:textColor="@color/font_middark_gray"
+            android:layout_marginLeft="6dp"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:id="@+id/pre_chapter"
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:src="@drawable/btn_front" />
+
+        <CheckBox
+            android:id="@+id/btn_play"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/play_selector"
+            android:layout_marginLeft="75.5dp"
+            android:layout_marginRight="75.5dp"/>
+
+        <ImageView
+            android:id="@+id/next_chapter"
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:src="@drawable/btn_after"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/bottom_book"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#F7F6F0"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <TextView
+                android:id="@+id/heji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计：XX书币"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原价："
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/all_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XX书币"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/price_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="｜已优惠：XXX"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/purchase"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/listenbook_selector"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

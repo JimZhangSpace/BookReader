@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <View
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:background="#CFBC97"/>
+
+        <TextView
+            android:id="@+id/book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公民与居民"
+            android:textSize="13sp"
+            android:textColor="@color/font_dark_gray"
+            android:layout_marginLeft="6dp"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/books_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="10sp"
+            android:textColor="@color/color_999999"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="会计师来到福建省洛距离考试的就发生了卡就教科书的开发商的法律克菲勒开始对肌肤的就死定了飞机啊是两地分居案例的世界开发了看就暗示的房间卡拉"
+        android:textSize="13sp"
+        android:textColor="@color/color_999999"
+        android:lineSpacingExtra="2dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DDDDDD"/>
+
+
+</LinearLayout>

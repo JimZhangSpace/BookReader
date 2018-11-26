@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:layout_width="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<net.soulwolf.widget.ratiolayout.widget.RatioRelativeLayout
+	    android:id="@+id/layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    app:datumRatio="datumWidth"
+	    app:heightRatio="320"
+	    app:widthRatio="1000" >
+		<com.youth.banner.Banner
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/banner"
+			app:banner_default_image="@drawable/default_image"
+			app:indicator_drawable_selected="@drawable/ic_page_indicator_focused"
+			app:indicator_drawable_unselected="@drawable/ic_page_indicator"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" />
+	</net.soulwolf.widget.ratiolayout.widget.RatioRelativeLayout>
+
+</LinearLayout>

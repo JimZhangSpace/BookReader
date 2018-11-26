@@ -1,0 +1,118 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="106dp"
+        android:layout_height="104dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"/>
+
+    <TextView
+        android:id="@+id/mingyan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="我们时间有限，所以只读经典。"
+        android:textAppearance="@style/font_big_mid_gray"
+        android:layout_marginTop="29dp"
+        android:layout_below="@id/iv_logo"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/phone_login"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+        android:padding="2dp"
+        android:enabled="true"
+        app:fb_textSize="19sp"
+        app:fb_textColor="#FFFFFF"
+        app:fb_text="手机登录"
+        app:fb_radius="20.5dp"
+        android:visibility="visible"
+        app:fb_disabledColor="@color/font_mid_gray"
+        app:fb_defaultColor="#CFBC97"
+        app:fb_focusColor="#CFBC97"
+        android:layout_below="@id/mingyan"
+        android:layout_marginTop="68dp"
+        android:layout_centerHorizontal="true" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/wechat_login"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+
+        android:enabled="true"
+        app:fb_textSize="19sp"
+        app:fb_textColor="#CFBC97"
+        app:fb_text="微信登录"
+        app:fb_radius="20.5dp"
+        android:visibility="visible"
+        app:fb_disabledColor="#ff0000"
+        app:fb_defaultColor="#00000000"
+        app:fb_focusColor="#00000000"
+        android:layout_below="@id/phone_login"
+        android:layout_marginTop="26dp"
+        android:layout_centerHorizontal="true"
+        app:fb_borderWidth="1dp"
+        app:fb_borderColor="#CFBC97"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/register"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+
+        android:enabled="true"
+        app:fb_textSize="19sp"
+        app:fb_textColor="#CFBC97"
+        app:fb_text="注册"
+        app:fb_radius="20.5dp"
+        android:visibility="visible"
+        app:fb_disabledColor="#ff0000"
+        app:fb_defaultColor="#00000000"
+        app:fb_focusColor="#00000000"
+        android:layout_below="@id/wechat_login"
+        android:layout_marginTop="26dp"
+        android:layout_centerHorizontal="true"
+        app:fb_borderWidth="1dp"
+        app:fb_borderColor="#CFBC97" />
+
+    <TextView
+        android:id="@+id/see_around"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="随便看看>>"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/register"
+        android:layout_marginTop="27.5dp"/>
+
+    <!--<Button android:id="@+id/btn_raw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="中国怪谈"/>
+    <Button android:id="@+id/btn_assest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/btn_raw"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="皮囊"/> -->
+    <!--<fr.castorflex.android.verticalviewpager.VerticalViewPager
+        android:id="@+id/verticalPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </fr.castorflex.android.verticalviewpager.VerticalViewPager>-->
+
+</RelativeLayout>

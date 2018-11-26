@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/book_image_card_view"
+            android:layout_width="61dp"
+            android:layout_height="87dp"
+            app:cardCornerRadius="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="7.5dp">
+            <ImageView
+                android:id="@+id/book_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/default_image" />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/book_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/book_image_card_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="1dp"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#070707"
+                android:text="《测试测试》"/>
+
+
+            <TextView
+                android:id="@+id/book_introduce"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="设计的开发商的反馈骄傲考虑到双方均可第三空间疯狂拉升开发贷款了。"
+                android:textColor="@color/color_999999"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/book_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+               android:textSize="11sp"
+                android:textColor="#F46565"
+                android:text="￥xxx"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_comment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="top">
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/btn_close"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/name_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="书评分享"
+            android:textSize="18sp"
+            android:textColor="@color/font_dark_gray"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|fill_vertical"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:id="@+id/share_book"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:background="@drawable/bg_top_poster"
+            android:gravity="center_vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/book_image_card_view"
+                        android:layout_width="86dp"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="2dp"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:id="@+id/book_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/default_image" />
+
+                    </android.support.v7.widget.CardView>
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/book_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/book_image_card_view"
+                        android:layout_marginLeft="13dp"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/book_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/font_dark_gray"
+                            android:text="测试测试"
+                            android:maxLines="2"
+                            android:ellipsize="end"/>
+                        <TextView
+                            android:id="@+id/book_author"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:textSize="9sp"
+                            android:textColor="#666666"
+                            android:text="测试测试测试"
+                            android:maxLines="2"
+                            android:ellipsize="end"/>
+
+
+                        <TextView
+                            android:id="@+id/book_translator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="测试测试"
+                            android:textAppearance="@style/font_small_mid_gray"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginTop="11dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/share_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/share_book"
+            android:background="#FFFDF6">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/comment_image"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:src="@drawable/default_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小豆子  读过"
+                    android:textSize="11sp"
+                    android:textColor="@color/font_dark_gray"
+                    android:layout_marginLeft="9dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/share_sentence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="绝对是林凤娇按时到了看风景卢卡斯大家速度快了风口浪尖按时来对抗解放军健康"
+                android:textSize="12sp"
+                android:textColor="@color/font_dark_gray"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginBottom="11dp"
+                android:layout_marginTop="14dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/share_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_bottom_poster"
+            android:layout_below="@id/share_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:src="@drawable/default_image"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textColor="@color/color_999999"
+                    android:text="长按识别二维码，"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textColor="@color/color_999999"
+                    android:text="下载果麦经典APP"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="把上面的卡片分享给朋友"
+            android:textSize="12sp"
+            android:textColor="@color/color_999999"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+                <Button
+                    android:id="@+id/share_wechat"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/share_to_wechat_selector"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朋友圈"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_999999"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:background="@color/color_999999"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+                <Button
+                    android:id="@+id/share_weibo"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/share_to_weibo_selector"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新浪微博"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_999999"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckedTextView
+                android:id="@+id/save"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                android:text="同时保存到手机"
+                android:textSize="10sp"
+                android:textColor="@color/color_999999"
+                android:drawableLeft="@drawable/is_share"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"/>
+            <CheckedTextView
+                android:id="@+id/anonymous"
+                android:checked="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                android:text="匿名分享"
+                android:textSize="10sp"
+                android:textColor="@color/color_999999"
+                android:drawableLeft="@drawable/is_share"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

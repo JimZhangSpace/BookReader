@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_radius5">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_interval"/>
+
+    <LinearLayout
+        android:id="@+id/layout_shuquan"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:background="@color/dot_before_customview"
+            android:layout_alignBottom="@id/tv_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/font_dark_gray"
+            android:text="书圈"
+            android:layout_marginLeft="6dp" />
+
+        <TextView
+            android:id="@+id/comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX位评论者，XX跳转发"
+            android:textAppearance="@style/font_small_mid_gray"
+            android:layout_marginLeft="8dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/book_write_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/write_comment"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@drawable/btn_defaut_edit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写书评"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

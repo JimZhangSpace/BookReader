@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common">
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_interval"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="11dp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <CheckedTextView
+            android:id="@+id/more_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#D1BAA2"
+            android:text="更多评论"
+          
+            android:drawableRight="@drawable/btn_back"
+            android:gravity="center"
+            android:drawablePadding="2dp"
+            android:layout_marginRight="11dp"/>
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/publish_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:text="点击发表第一条评论~"
+        android:textSize="11sp"
+        android:textColor="@color/color_999999" />
+
+    <LinearLayout
+        android:id="@+id/somebody_comment"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/comment_image"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/default_image" />
+
+        <TextView
+            android:id="@+id/comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小苹果"
+            android:textSize="12sp"
+            android:textColor="@color/font_dark_gray"
+            android:layout_marginLeft="9dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-x-xx 19:17"
+            android:textSize="10sp"
+            android:textColor="@color/color_999999"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="短斤少两开发建设两地分居暗示了极度疯狂了解开发商离开的法律时代发生的飞洒地方世纪东方凯撒的法律减少了地方精神的浪费"
+        android:textSize="14sp"
+        android:textColor="@color/font_dark_gray"
+        android:lineSpacingExtra="5dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="11dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_interval"/>
+
+</LinearLayout>

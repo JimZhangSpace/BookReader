@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common">
+
+    <View
+        android:id="@+id/interval"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_interval"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_shudan"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:background="@drawable/shudan_selector">
+
+        <ImageView
+            android:id="@+id/top_left_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/new_icon" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5.5dp"
+            android:layout_marginRight="5.5dp"
+            android:layout_marginTop="5.5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/shudan_book_image"
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/default_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/shudan_book_introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="多少積分拉升階段的時間弗拉"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/hot"
+                    android:layout_width="12dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/btn_popularity" />
+
+                <TextView
+                    android:id="@+id/read_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1200人"
+                    android:textSize="10sp"
+                    android:textColor="@color/color_999999"
+                    android:layout_marginLeft="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

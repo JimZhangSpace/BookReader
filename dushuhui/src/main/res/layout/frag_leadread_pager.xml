@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_bg_gray"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white"
+        >
+
+        <!--<com.flyco.tablayout.SlidingTabLayout-->
+            <!--android:id="@+id/tab_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#666666"-->
+            <!--android:paddingBottom="15dp"-->
+            <!--android:paddingTop="15dp"-->
+            <!--tl:tl_indicator_gravity="TOP"-->
+            <!--tl:tl_textBold="SELECT"-->
+            <!--tl:tl_underline_color="#1A000000"-->
+            <!--tl:tl_underline_gravity="TOP"-->
+            <!--tl:tl_underline_height="1dp"/>-->
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            tl:tl_indicator_corner_radius="1dp"
+            tl:tl_indicator_height="2dp"
+            tl:tl_indicator_width="30dp"
+            tl:tl_textSelectColor="@color/colorAccent"
+            tl:tl_textUnselectColor="@color/font_dark_gray"
+            tl:tl_tab_width="90dp"
+            tl:tl_indicator_color="@color/colorAccent"
+
+            />
+
+        <!--<net.lucode.hackware.magicindicator.MagicIndicator-->
+            <!--android:id="@+id/magic_indicator"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp" />-->
+
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <!--<com.cpoopc.scrollablelayoutlib.ScrollableLayout-->
+
+        <!--android:id="@+id/scrollableLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--&gt;-->
+
+
+
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@id/viewpager"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+    <!--</com.cpoopc.scrollablelayoutlib.ScrollableLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/interval"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_interval"/>
+
+    <RelativeLayout
+        android:id="@+id/bg_custom"
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:background="@drawable/bg_custom">
+
+        <LinearLayout
+            android:id="@+id/tag_and_book"
+            android:orientation="horizontal"
+            android:layout_width="98dp"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+            <View
+                android:id="@+id/dot_tag"
+                android:layout_width="4dp"
+                android:layout_height="15dp"
+                android:background="@color/dot_before_customview" />
+            <android.support.v7.widget.CardView
+                android:id="@+id/book_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="4dp"
+                android:layout_marginLeft="7dp"
+
+                android:layout_centerVertical="true">
+
+
+                    <ImageView
+                        android:id="@+id/book_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/book_image"
+                        android:layout_alignStart="@+id/book_image"
+                        android:layout_alignTop="@+id/book_image"
+                        android:layout_gravity="center"
+                        android:src="@drawable/default_image" />
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/book_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tag_and_book"
+            android:layout_marginLeft="9.5dp">
+
+            <TextView
+                android:id="@+id/book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/font_17_gray"
+                android:text="测试测试"
+                android:layout_marginLeft="3dp"/>
+            <TextView
+                android:id="@+id/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/font_13_middark_gray"
+                android:text="测试测试"
+                android:maxLines="1"/>
+            <TextView
+                android:id="@+id/book_introduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/font_11_999999"
+                android:layout_marginTop="15dp"
+                android:text="所经历的分解啊士大夫撒旦看风景洛杉矶的的数据分类数量大幅拉升的发了疯爱神的箭拉法基奥利弗"
+                android:layout_marginRight="13dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="13dp">
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:layout_marginRight="10dp"
+
+                    android:id="@+id/btn_upload_img"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:padding="2dp"
+                    android:enabled="true"
+                    app:fb_textSize="9sp"
+                    app:fb_text="选择"
+                    app:fb_textColor="#000000"
+                    app:fb_radius="2dp"
+                    android:visibility="visible"
+                    app:fb_disabledColor="@color/font_mid_gray"
+                    app:fb_defaultColor="#00000000"
+                    app:fb_focusColor="@color/primary_dark"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                   <ImageView
+                       android:id="@+id/eye"
+                       android:layout_width="15dp"
+                       android:layout_height="15dp"
+                       android:src="@drawable/list_see_icon" />
+                    <TextView
+                        android:id="@+id/read_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="测试测试"
+                        android:textAppearance="@style/font_9_999999"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/list_discount"/>
+    </RelativeLayout>
+
+</LinearLayout>

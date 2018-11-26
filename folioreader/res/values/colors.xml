@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="transparent_black">#80000000</color>
+    <color name="borders">#F1EFF2</color>
+    <color name="black">#000000</color>
+    <color name="night">#322D32</color>
+    <color name="dark_night">#090609</color>
+    <color name="app_green">#71C951</color>
+    <color name="app_gray">#bcbcbc</color>
+    <color name="yellow">#FFEB6B</color>
+    <color name="green">#C0ED72</color>
+    <color name="blue">#ADD8FF</color>app_green
+    <color name="pink">#FFB0CA</color>
+    <color name="gray_text">#B6B6B6</color>
+    <color name="red">#ff0000</color>
+    <color name="text_color">#767676</color>
+    <color name="white">#FFFFFF</color>
+    <color name="underline">#F02814</color>
+    <color name="grey_color">#a8a8a8</color>
+    <color name="webview_night">#131313</color>
+
+    <color name="font_mid_gray">#666666</color>
+    <color name="font_dark_gray">#333333</color>
+    <color name="font_light_gray">#999999</color>
+    <color name="read_progress_color">#f53f3f</color>
+    <color name="read_bg_color">#ebebeb</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_bg_color">#F5F7F2</color>
+    <color name="read_red_color">#e44649</color>
+    <color name="mainColor">#d9c39c</color>
+    <color name="divider_line">#dddddd</color>
+
+    <color name="colorPrimary" tools:ignore="MissingDefaultResource">#F5F7F2</color>
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/name_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户余额"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/btn_gold_details"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="明细"
+            android:textSize="14sp"
+            android:textColor="@color/color_999999"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <RelativeLayout
+                android:layout_width="345dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/chongzhi_bg"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="用户名"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:id="@+id/gold_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textSize="40dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="28dp"
+                        android:layout_below="@id/user_name"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:id="@+id/shubi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="书币"
+                        android:textSize="14sp"
+                        android:textColor="#999999"
+                        android:layout_toRightOf="@id/gold_num"
+                        android:layout_alignBottom="@id/gold_num"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_common"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45.5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充值"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="（书币）"
+                        android:textSize="14sp"
+                        android:textColor="#999999"/>
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:layout_gravity="center_horizontal"/>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="310dp"
+                    android:layout_height="33dp"
+                    android:text="确认充值XXX元"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_chongzhi"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginTop="13dp"
+                    android:text="充值说明："
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginTop="11dp"
+                    android:text="1.账户余额可用于购买APP内所有产品；"
+                    android:textColor="#999999"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginTop="5dp"
+                    android:text="2.若充值后长时间未生效，请联系客服021-64389496-101，也可去[果麦读友会]微信公众号找我们解决。"
+                    android:textColor="#999999"
+                    android:textSize="11sp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/bg_interval"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_common">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="32dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/book_image_card_view"
+                android:layout_width="57dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="2dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/book_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/default_image" />
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/book_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/book_image_card_view"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/book_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/font_big_dark_gray"
+                    android:text="测试测试"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+                <TextView
+                    android:id="@+id/book_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:textAppearance="@style/font_small_mid_gray"
+                    android:text="测试测试测试"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+
+                <TextView
+                    android:id="@+id/book_translator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测试测试"
+                    android:textAppearance="@style/font_small_mid_gray"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="11dp"/>
+
+                </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

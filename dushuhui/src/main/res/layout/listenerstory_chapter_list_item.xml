@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/chapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第X章 XXXXXXXX"
+            android:textColor="@color/font_dark_gray"
+            android:textSize="14sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:id="@+id/listener_all_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时长：XXX"
+                android:textSize="11sp"
+                android:textColor="@color/color_999999"/>
+            <TextView
+                android:id="@+id/listener_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未听"
+                android:textSize="11sp"
+                android:textColor="@color/color_999999"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/listener_free"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/button_play"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/btn_normal_audio_suspend"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="试听"
+            android:textColor="@color/color_999999"
+            android:textSize="11sp" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

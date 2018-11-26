@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root"
+    android:background="@color/bg_interval"
+    android:orientation="vertical" >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/content_head"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_gravity="top">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+            app:titleTextAppearance="@style/Toolbar_TextAppearance_White">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/font_dark_gray"
+                android:text="书籍详情"
+                />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/content_book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_above="@id/bottom_book"
+        android:layout_below="@id/content_head"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="50dp">
+        <include layout="@layout/common_recyler_layout" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/bottom_book"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#F7F6F0"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_shidu"
+                android:layout_width="120dp"
+                android:layout_height="33dp"
+                android:background="@drawable/shidufree_selector"/>
+            <Button
+                android:id="@+id/btn_purchase"
+                android:layout_width="120dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="51dp"
+                android:background="@drawable/buy_now_selector"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_pay_gold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_50"
+        android:visibility="gone">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_common"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/btn_close"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/btn_close"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/book_pay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人性的优点"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="27dp" />
+
+            <TextView
+                android:id="@+id/price_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="现价：￥xxx书币"
+                android:textSize="14sp"
+                android:textColor="@color/color_999999"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="26dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D8D8D8"
+                android:layout_marginTop="13.5dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/price_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原价：￥xxx书币"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"
+                   />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="14dp"
+                    android:background="#D8D8D8"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+
+                <TextView
+                    android:id="@+id/price_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已优惠：￥xxx书币"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"
+                  />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D8D8D8"
+                android:layout_marginTop="13.5dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"/>
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="310dp"
+                android:layout_height="33dp"
+                android:text="确认支付XX书币"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/bg_pay_gold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="*请在24小时内完成订单，过时订单将被自动取消"
+                android:textSize="9sp"
+                android:textColor="@color/color_999999"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/activity_purchasebook_dialog"/>
+
+    <include layout="@layout/paytools_layout"/>
+
+
+</FrameLayout>
+

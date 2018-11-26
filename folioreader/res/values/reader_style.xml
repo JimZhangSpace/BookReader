@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="font_mid_mid_gray">
+        <item name="android:textColor">@color/font_mid_gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="font_small_mid_gray">
+        <item name="android:textColor">@color/font_mid_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="font_small_light_gray">
+        <item name="android:textColor">@color/font_light_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="font_xsmall_mid_gray">
+        <item name="android:textColor">@color/font_mid_gray</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="font_mid_dark_gray">
+        <item name="android:textColor">@color/font_dark_gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="font_big_dark_gray">
+        <item name="android:textColor">@color/font_dark_gray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

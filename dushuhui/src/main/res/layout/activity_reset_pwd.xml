@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/name_resetpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重设密码"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="55dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="38.5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/phone"/>
+            <EditText android:id="@id/edit_phone"
+                android:layout_marginLeft="16dp"
+                android:cursorVisible="false"
+                android:inputType="phone"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/font_15_black"
+                android:textColorHint="@color/color_999999"
+
+                android:hint="手机号码"
+
+                android:gravity="left|center_vertical"  />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:id="@+id/phone_check"
+            android:layout_width="270dp"
+            android:layout_height="38.5dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="17.5dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/check"/>
+            <EditText android:id="@+id/edit_authcode"
+                android:layout_marginLeft="16dp"
+                android:cursorVisible="false"
+                android:inputType="phone"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                style="@style/font_15_black"
+                android:textColorHint="@color/color_999999"
+
+                android:hint="请输入验证码"
+
+                android:gravity="left|center_vertical"  />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/get_check"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:layout_gravity="right|center_vertical"
+                android:enabled="true"
+                android:visibility="visible"
+                app:fb_borderColor="#333333"
+                app:fb_borderWidth="1dp"
+                app:fb_defaultColor="#00000000"
+                app:fb_disabledColor="#00000000"
+                app:fb_focusColor="#00000000"
+                app:fb_radius="15dp"
+
+                app:fb_text="获取验证码"
+                app:fb_textColor="@color/color_f46565"
+                app:fb_textSize="13sp" />
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_line"
+            />
+
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="38.5dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="17.5dp">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/password"/>
+            <EditText android:id="@+id/edit_password"
+                android:layout_marginLeft="16dp"
+                android:cursorVisible="false"
+                android:inputType="phone"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/font_15_black"
+                android:textColorHint="@color/color_999999"
+                android:layout_weight="1"
+                android:hint="密码"
+
+                android:gravity="left|center_vertical"  />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/eyes"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="38.5dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="17.5dp">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/password"/>
+            <EditText
+                android:id="@+id/edit_confirm_pwd"
+                android:layout_marginLeft="16dp"
+                android:cursorVisible="false"
+                android:inputType="phone"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/font_15_black"
+                android:textColorHint="@color/color_999999"
+                android:layout_weight="1"
+                android:hint="密码"
+
+                android:gravity="left|center_vertical"  />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/eyes"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_line" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/reset"
+            android:layout_width="253dp"
+            android:layout_height="47dp"
+            android:enabled="true"
+            app:fb_textSize="19sp"
+            app:fb_textColor="#FFFFFF"
+            app:fb_text="确认修改"
+            app:fb_radius="4dp"
+            android:visibility="visible"
+            app:fb_disabledColor="#ff0000"
+            app:fb_defaultColor="#F46565"
+            app:fb_focusColor="#F46565"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

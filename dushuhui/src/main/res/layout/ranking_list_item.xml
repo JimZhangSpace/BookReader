@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/ranking_bg"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true">
+    
+    <android.support.v7.widget.CardView
+        android:id="@+id/book_image"
+        android:layout_width="70.5dp"
+        android:layout_height="97dp"
+        app:cardCornerRadius="4dp"
+        android:layout_marginLeft="12.5dp"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="90dp"
+            android:src="@drawable/default_image"
+            android:layout_gravity="center"/>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/book_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/book_image"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginRight="11.5dp">
+        <TextView
+            android:id="@+id/book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/font_17_gray"
+            android:text="测试测试"/>
+        <TextView
+            android:id="@+id/book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:textAppearance="@style/font_13_middark_gray"
+            android:text="测试测试"/>
+        <TextView
+            android:id="@+id/book_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/font_11_999999"
+            android:layout_marginTop="13.5dp"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text="所经历的分解啊士大夫撒旦看风景洛杉矶的的数据分类数量大幅拉升的发了疯爱神的箭拉法基奥利弗"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="53dp"
+        android:layout_height="20dp"
+        android:src="@drawable/top_one"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+
+    <include layout="@layout/divider_line" />
+    
+
+</LinearLayout>

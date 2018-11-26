@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp" android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="15dp"
+        >
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:background="@drawable/reader_note_tip_icon"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/font_dark_gray"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="公民与臣民"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_page"
+            android:textColor="@color/font_light_gray"
+            android:textSize="10sp"
+            android:text="168"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:id="@+id/tv_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不只是大金和南宋，整个欧亚大陆都在瑟瑟发抖。因为对于成吉思汗来说：征服你，不需要理由。"
+        android:maxLines="2"
+        android:textColor="@color/font_light_gray"
+        android:textSize="13sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="6dp"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_marginLeft="9dp"
+            android:textColor="@color/font_light_gray"
+            android:textSize="10sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="昨天"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_delete"
+            android:textColor="@color/font_light_gray"
+            android:drawableLeft="@mipmap/read_delete"
+            android:textSize="8sp"
+            android:text="删除"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <View
+        android:background="#DDDDDD"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>

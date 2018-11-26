@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StyleableTextView">
+        <attr name="folio_font" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="DirectionalViewpager">
+        <attr name="direction" format="string">
+           <!-- <enum name="vertical" value="vertical"></enum>
+            <enum name="horizontal" value="horizontal"></enum>-->
+        </attr>
+    </declare-styleable>
+
+<!--QMUI配色-->
+    <attr name="app_primary_color" format="color"/> <!-- topbar -->
+    <attr name="app_content_bg_color" format="color"/> <!-- content-->
+</resources>

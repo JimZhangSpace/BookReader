@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="52dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/bottom_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="52.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <CheckedTextView
+                    android:id="@+id/check_leadread"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:drawableTop="@drawable/tab_leadread"
+                    android:gravity="center"
+                    android:paddingTop="6dip"
+                    android:paddingBottom="2dip"
+                    android:text="领读"
+                    android:textAppearance="@style/font_main_tab"
+                    android:textColor="@drawable/tab_bottom_text_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <CheckedTextView
+                    android:id="@+id/check_bookshop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:drawableTop="@drawable/tab_bookshop"
+                    android:gravity="center"
+                    android:paddingTop="6dip"
+                    android:paddingBottom="2dip"
+                    android:text="书城"
+                    android:textAppearance="@style/font_main_tab"
+                    android:textColor="@drawable/tab_bottom_text_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <CheckedTextView
+                    android:id="@+id/check_bookshelf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:drawableTop="@drawable/tab_bookshelf"
+                    android:gravity="center"
+                    android:paddingTop="6dip"
+                    android:paddingBottom="2dip"
+                    android:text="书架"
+                    android:textAppearance="@style/font_main_tab"
+                    android:textColor="@drawable/tab_bottom_text_color" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <CheckedTextView
+                    android:id="@+id/check_mine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@drawable/tab_my"
+                    android:gravity="center"
+                    android:paddingTop="6dip"
+                    android:paddingBottom="2dip"
+                    android:text="我的"
+                    android:textAppearance="@style/font_main_tab"
+                    android:textColor="@drawable/tab_bottom_text_color" />
+
+                <TextView
+                    android:id="@+id/tv_message_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="45dp"
+                    android:gravity="center"
+                    android:textAppearance="@style/font_message_tv_count"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/actionbar_shadow_up" />
+</FrameLayout>

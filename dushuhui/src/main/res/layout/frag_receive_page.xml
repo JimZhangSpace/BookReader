@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/name_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领取书币"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="361.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_common">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginTop="10.5dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/good_book_share"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每日好书分享"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="6.5dp"
+                        android:src="@drawable/gold_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#EEC615"
+                        android:text="+100"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="分享一本好书给朋友"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/shared_everyday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:src="@drawable/to_complete"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/read_everyday_icon"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每日阅读"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="6.5dp"
+                        android:src="@drawable/gold_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#EEC615"
+                        android:text="+100"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="每日丰富你的阅读量"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/read_everyday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:src="@drawable/received"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/note_everyday_icon"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每日笔记分享"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="6.5dp"
+                        android:src="@drawable/gold_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#EEC615"
+                        android:text="+100"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="分享你的笔记，让朋友和你一起"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/note_everyday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:src="@drawable/receive"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/comment_everyday_icon"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每日评论分享"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="6.5dp"
+                        android:src="@drawable/gold_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#EEC615"
+                        android:text="+100"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="分享你的评论，然朋友和你一起"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/comment_everyday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:src="@drawable/to_complete"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/leadread_everyday_icon"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每日领读分享"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="6.5dp"
+                        android:src="@drawable/gold_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#EEC615"
+                        android:text="+100"
+                        android:layout_marginLeft="3dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="分享领读，让朋友和你一起"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/leadread_everyday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:src="@drawable/to_complete"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/gold_num"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="可领：100书币"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+</LinearLayout>
